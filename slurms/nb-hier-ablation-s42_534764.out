@@ -1,0 +1,79 @@
+=== Job Started: Fri Oct 16 11:17:21 UTC 2026 on n-1.sophont.cgen ===
+GPU Device: NVIDIA H100 80GB HBM3, 81559 MiB
+[FULL] Starting run on device: cuda, seed: 42, components: 96
+Loading precomputed PCA feature cache from /data/dojo/nsd_data/pca_features_cache.npz...
+Model parameters: 115,416
+Epoch  5/30 | loss=2.4372 | train=27.1% | val=23.5% | 6s
+Epoch 10/30 | loss=2.3294 | train=30.4% | val=24.7% | 8s
+Epoch 15/30 | loss=2.2821 | train=31.5% | val=25.2% | 11s
+Epoch 20/30 | loss=2.2540 | train=32.3% | val=25.3% | 13s
+Epoch 25/30 | loss=2.2449 | train=32.4% | val=25.1% | 16s
+Epoch 30/30 | loss=2.2426 | train=32.6% | val=25.3% | 19s
+
+Final Result [full]: {"stream": "full", "n_components": 96, "seed": 42, "params": 115416, "wall_t": 19.02, "acc_train": 34.66, "acc_validation": 25.38, "acc_test": 28.03, "acc_testid": 29.82, "acc_shared1000": 30.39}
+Saved to /admin/home/dojo/hierarchical_decoding/results/result_full_s42.json
+[EARLY] Starting run on device: cuda, seed: 42, components: 96
+Loading precomputed PCA feature cache from /data/dojo/nsd_data/pca_features_cache.npz...
+Model parameters: 115,416
+Epoch  5/30 | loss=2.6055 | train=22.9% | val=18.9% | 6s
+Epoch 10/30 | loss=2.5085 | train=25.6% | val=19.3% | 9s
+Epoch 15/30 | loss=2.4679 | train=26.6% | val=19.4% | 11s
+Epoch 20/30 | loss=2.4454 | train=27.0% | val=19.2% | 14s
+Epoch 25/30 | loss=2.4383 | train=27.5% | val=19.2% | 16s
+Epoch 30/30 | loss=2.4330 | train=27.3% | val=19.1% | 19s
+
+Final Result [early]: {"stream": "early", "n_components": 96, "seed": 42, "params": 115416, "wall_t": 19.04, "acc_train": 27.72, "acc_validation": 19.6, "acc_test": 20.37, "acc_testid": 24.56, "acc_shared1000": 23.22}
+Saved to /admin/home/dojo/hierarchical_decoding/results/result_early_s42.json
+[HIGHER] Starting run on device: cuda, seed: 42, components: 96
+Loading precomputed PCA feature cache from /data/dojo/nsd_data/pca_features_cache.npz...
+Model parameters: 115,416
+Epoch  5/30 | loss=2.4604 | train=26.6% | val=22.5% | 6s
+Epoch 10/30 | loss=2.3513 | train=29.4% | val=22.6% | 8s
+Epoch 15/30 | loss=2.3031 | train=30.6% | val=22.7% | 11s
+Epoch 20/30 | loss=2.2775 | train=31.5% | val=22.6% | 14s
+Epoch 25/30 | loss=2.2671 | train=31.8% | val=22.7% | 16s
+Epoch 30/30 | loss=2.2621 | train=32.0% | val=22.6% | 19s
+
+Final Result [higher]: {"stream": "higher", "n_components": 96, "seed": 42, "params": 115416, "wall_t": 18.96, "acc_train": 32.79, "acc_validation": 23.16, "acc_test": 22.86, "acc_testid": 28.3, "acc_shared1000": 26.91}
+Saved to /admin/home/dojo/hierarchical_decoding/results/result_higher_s42.json
+[HIERARCHICAL] Starting run on device: cuda, seed: 42, components: 96
+Loading precomputed PCA feature cache from /data/dojo/nsd_data/pca_features_cache.npz...
+Model parameters: 543,512
+Epoch  5/30 | loss=2.2374 | train=32.9% | val=24.0% | 9s
+Epoch 10/30 | loss=2.0789 | train=37.3% | val=23.8% | 14s
+Epoch 15/30 | loss=1.9667 | train=40.5% | val=23.2% | 19s
+Epoch 20/30 | loss=1.8803 | train=42.8% | val=23.1% | 25s
+Epoch 25/30 | loss=1.8267 | train=44.5% | val=22.9% | 30s
+Epoch 30/30 | loss=1.8204 | train=44.8% | val=22.9% | 35s
+
+Final Result [hierarchical]: {"stream": "hierarchical", "n_components": 96, "seed": 42, "params": 543512, "wall_t": 34.96, "acc_train": 40.9, "acc_validation": 24.16, "acc_test": 22.84, "acc_testid": 33.33, "acc_shared1000": 32.2}
+Saved to /admin/home/dojo/hierarchical_decoding/results/result_hierarchical_s42.json
+
+======================================================================
+Running Stream: FULL (Seed 42)
+======================================================================
+
+======================================================================
+Running Stream: EARLY (Seed 42)
+======================================================================
+
+======================================================================
+Running Stream: HIGHER (Seed 42)
+======================================================================
+
+======================================================================
+Running Stream: HIERARCHICAL (Seed 42)
+======================================================================
+
+
+===========================================================================
+HIERARCHICAL VISUAL CORTEX DECODING: BENCHMARK SUMMARY
+===========================================================================
+Stream         | Voxels   | Params   | Train %  | Val %    | TestID (In-Dist) % | Test (Cross-Subj) % | Wall Time (s)
+---------------------------------------------------------------------------------------------------------
+Full           | 18,577   | 115,416  | 34.66    | 25.38    | 29.82              | 28.03               | 19.0s
+Early          | 9,344    | 115,416  | 27.72    | 19.60    | 24.56              | 20.37               | 19.0s
+Higher         | 9,233    | 115,416  | 32.79    | 23.16    | 28.30              | 22.86               | 19.0s
+Hierarchical   | 18,577 (dual) | 543,512  | 40.90    | 24.16    | 33.33              | 22.84               | 35.0s
+=========================================================================================================
+=== Job Finished: Fri Oct 16 11:19:22 UTC 2026 ===

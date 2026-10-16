@@ -1,0 +1,12 @@
+{
+  "stream": "hierarchical",
+  "n_components": 96,
+  "seed": 42,
+  "params": 543512,
+  "wall_t": 34.96,
+  "acc_train": 40.9,
+  "acc_validation": 24.16,
+  "acc_test": 22.84,
+  "acc_testid": 33.33,
+  "acc_shared1000": 32.2
+}

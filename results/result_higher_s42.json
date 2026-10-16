@@ -1,0 +1,12 @@
+{
+  "stream": "higher",
+  "n_components": 96,
+  "seed": 42,
+  "params": 115416,
+  "wall_t": 18.96,
+  "acc_train": 32.79,
+  "acc_validation": 23.16,
+  "acc_test": 22.86,
+  "acc_testid": 28.3,
+  "acc_shared1000": 26.91
+}
