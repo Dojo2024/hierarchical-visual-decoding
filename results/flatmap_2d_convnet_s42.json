@@ -1,0 +1,9 @@
+{
+  "model": "Flatmap2DConvNet",
+  "params": 109104,
+  "train_acc": 22.46,
+  "val_acc": 14.47,
+  "testid_acc": 17.43,
+  "test_acc": 16.73,
+  "wall_time": 105.0
+}

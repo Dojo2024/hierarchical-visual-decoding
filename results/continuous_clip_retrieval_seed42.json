@@ -1,0 +1,42 @@
+{
+  "early_visual": {
+    "val_cosine": 0.7321,
+    "testid_cosine": 0.7383,
+    "testid_top1": 0.1,
+    "testid_top5": 0.46,
+    "test_cosine": 0.7339,
+    "test_top1": 0.06,
+    "test_top5": 0.37,
+    "wall_time": 15.83
+  },
+  "higher_visual": {
+    "val_cosine": 0.7387,
+    "testid_cosine": 0.746,
+    "testid_top1": 0.21,
+    "testid_top5": 0.69,
+    "test_cosine": 0.735,
+    "test_top1": 0.11,
+    "test_top5": 0.33,
+    "wall_time": 15.11
+  },
+  "monolithic_control": {
+    "val_cosine": 0.7426,
+    "testid_cosine": 0.7518,
+    "testid_top1": 0.23,
+    "testid_top5": 0.79,
+    "test_cosine": 0.7422,
+    "test_top1": 0.11,
+    "test_top5": 0.71,
+    "wall_time": 15.72
+  },
+  "hierarchical_dual_stream": {
+    "val_cosine": 0.7406,
+    "testid_cosine": 0.752,
+    "testid_top1": 0.15,
+    "testid_top5": 0.85,
+    "test_cosine": 0.7347,
+    "test_top1": 0.06,
+    "test_top5": 0.45,
+    "wall_time": 31.18
+  }
+}
